@@ -1,0 +1,15 @@
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/bin/Debug/net6.0/FinalVer_Assignment_1
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/bin/Debug/net6.0/FinalVer_Assignment_1.deps.json
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/bin/Debug/net6.0/FinalVer_Assignment_1.runtimeconfig.json
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/bin/Debug/net6.0/FinalVer_Assignment_1.dll
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/bin/Debug/net6.0/FinalVer_Assignment_1.pdb
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/FinalVer_Assignment_1.csproj.AssemblyReference.cache
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/FinalVer_Assignment_1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/FinalVer_Assignment_1.AssemblyInfoInputs.cache
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/FinalVer_Assignment_1.AssemblyInfo.cs
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/FinalVer_Assignment_1.csproj.CoreCompileInputs.cache
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/FinalVer_Assignment_1.dll
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/refint/FinalVer_Assignment_1.dll
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/FinalVer_Assignment_1.pdb
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/FinalVer_Assignment_1.genruntimeconfig.cache
+/Users/johnxtss/Projects/FinalVer_Assignment_1/FinalVer_Assignment_1/obj/Debug/net6.0/ref/FinalVer_Assignment_1.dll

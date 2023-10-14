@@ -1,0 +1,16 @@
+20000,30002,Dr Avinash,Jimmy Kim,fever
+20000,30002,Dr Avinash,Jimmy Kim,cough
+20001,30000,Dr Bobby,Davey Fuse,headache
+20000,30001,Dr Avinash,Kenny Scrub,flu
+20000,30001,Dr Avinash,Kenny Scrub,ankle pain
+20001,30003,Dr Bobby,Dustin Wang,cough
+20001,30003,Dr Bobby,Dustin Wang,fever
+20001,30003,Dr Bobby,Dustin Wang,headache
+20001,30003,Dr Bobby,Dustin Wang,sorethroat
+20002,30005,Dr Jisoo,Jeremy Lin,sorethroat
+20000,30004,Dr Avinash,Milly Lee,stomach ache
+20000,30004,Dr Avinash,Milly Lee,cough
+20002,30005,Dr Jisoo,Jeremy Lin,flu
+20001,30003,Dr Bobby,Dustin Wang,stomach ache
+20003,30007,Dr Steve,Jackson Wang,ankle pain
+20003,30007,Dr Steve,Jackson Wang,sorethroat
