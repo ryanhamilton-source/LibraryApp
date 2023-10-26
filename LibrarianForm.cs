@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace FinalVer_Assignment_2
 {
-    public partial class UserForm : Form
+    public partial class LibrarianForm : Form
     {
         private LoginForm loginForm;
-        public UserForm()
+        public LibrarianForm()
         {
             this.loginForm = new LoginForm();
             InitializeComponent();
