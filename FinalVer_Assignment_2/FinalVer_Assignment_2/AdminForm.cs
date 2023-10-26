@@ -48,5 +48,17 @@ namespace FinalVer_Assignment_2
             listUserForm.Show();
             this.Hide();
         }
+
+        private void btnListAllLibrarian_Click(object sender, EventArgs e)
+        {
+            ListLibrarianForm listLibrarianForm = new ListLibrarianForm();
+            listLibrarianForm.Show();
+            this.Hide();
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

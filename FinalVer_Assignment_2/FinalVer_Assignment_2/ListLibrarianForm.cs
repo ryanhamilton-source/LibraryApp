@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace FinalVer_Assignment_2
 {
-    public partial class ListUserForm : Form
+    public partial class ListLibrarianForm : Form
     {
-        public ListUserForm()
+        public ListLibrarianForm()
         {
             InitializeComponent();
             // Center the form on the screen
@@ -26,8 +25,10 @@ namespace FinalVer_Assignment_2
             // Set DataGridView to be read-only
             dataGridView1.ReadOnly = true;
         }
+
         DataTable table = new DataTable();
-        private void ListUserForm_Load(object sender, EventArgs e)
+
+        private void ListLibrarianForm_Load(object sender, EventArgs e)
         {
             table.Columns.Add("ID", typeof(int));
             table.Columns.Add("Name", typeof(string));
@@ -36,9 +37,9 @@ namespace FinalVer_Assignment_2
             table.Columns.Add("Address", typeof(string));
 
 
-            foreach (User user in Program.users.GetUsersList())
+            foreach (Librarian librarian in Program.librarians.GetLibrariansList())
             {
-                table.Rows.Add(user.GetId(), user.GetName(), user.GetEmail(), user.GetPhone(), user.GetAddress());
+                table.Rows.Add(librarian.GetId(), librarian.GetName(), librarian.GetEmail(), librarian.GetPhone(), librarian.GetAddress());
             }
 
             dataGridView1.DataSource = table;

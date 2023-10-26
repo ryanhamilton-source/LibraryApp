@@ -12,11 +12,19 @@ namespace FinalVer_Assignment_2
 {
     public partial class UserForm : Form
     {
+        private LoginForm loginForm;
         public UserForm()
         {
+            this.loginForm = new LoginForm();
             InitializeComponent();
             // Center the form on the screen
             this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.loginForm.Show();
         }
     }
 }

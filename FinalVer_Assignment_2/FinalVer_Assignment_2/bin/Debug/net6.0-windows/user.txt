@@ -7,3 +7,4 @@
 30006,rn6sWXiv,Noah Kim,noah@mail.com,0433298872,11 Parramatta Sydney NSW
 30007,NOAFXDgm,Jackson Wang,jackson66@mail.com,0488996721,66 Beverly Sydney NSW
 30008,r5ugH1R2,mincha lee,min@gmail.com,1111111111,77 harris street Ultimo NSW 2007
+30009,OZrY4iF2,dumpling lee,dumpling@gmail.com,1111111111,87 Harris Street Ultimo NSW 20007

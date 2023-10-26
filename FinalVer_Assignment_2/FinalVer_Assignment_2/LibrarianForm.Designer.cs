@@ -41,7 +41,7 @@ namespace FinalVer_Assignment_2
             panel2 = new Panel();
             label1 = new Label();
             label3 = new Label();
-            button3 = new Button();
+            btnLogOut = new Button();
             label4 = new Label();
             label2 = new Label();
             panel1.SuspendLayout();
@@ -139,15 +139,16 @@ namespace FinalVer_Assignment_2
             label3.TabIndex = 7;
             label3.Text = "Librarian";
             // 
-            // button3
+            // btnLogOut
             // 
-            button3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(719, 127);
-            button3.Name = "button3";
-            button3.Size = new Size(152, 48);
-            button3.TabIndex = 37;
-            button3.Text = "Log Out";
-            button3.UseVisualStyleBackColor = true;
+            btnLogOut.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogOut.Location = new Point(719, 127);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(152, 48);
+            btnLogOut.TabIndex = 37;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // label4
             // 
@@ -175,7 +176,7 @@ namespace FinalVer_Assignment_2
             ClientSize = new Size(919, 580);
             Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(button3);
+            Controls.Add(btnLogOut);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "LibrarianForm";
@@ -198,7 +199,7 @@ namespace FinalVer_Assignment_2
         private Panel panel2;
         private Label label1;
         private Label label3;
-        private Button button3;
+        private Button btnLogOut;
         private Label label4;
         private Label label2;
     }

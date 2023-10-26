@@ -20,3 +20,4 @@ C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug
 C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.AddUserForm.resources
 C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.AddLibrarianForm.resources
 C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.ListUserForm.resources
+C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.ListLibrarianForm.resources

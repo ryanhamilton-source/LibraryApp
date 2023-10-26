@@ -13,6 +13,9 @@
     <Compile Update="LibrarianForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ListLibrarianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ListUserForm.cs">
       <SubType>Form</SubType>
     </Compile>

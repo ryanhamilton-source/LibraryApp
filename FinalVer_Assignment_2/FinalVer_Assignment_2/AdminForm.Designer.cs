@@ -39,7 +39,7 @@ namespace FinalVer_Assignment_2
             btnLogOut = new Button();
             btnAddLibrarian = new Button();
             panel1 = new Panel();
-            button6 = new Button();
+            btnListAllLibrarian = new Button();
             btnListUser = new Button();
             label2 = new Label();
             label4 = new Label();
@@ -111,7 +111,7 @@ namespace FinalVer_Assignment_2
             // 
             // panel1
             // 
-            panel1.Controls.Add(button6);
+            panel1.Controls.Add(btnListAllLibrarian);
             panel1.Controls.Add(btnListUser);
             panel1.Controls.Add(btnAddUser);
             panel1.Controls.Add(btnAddLibrarian);
@@ -120,15 +120,16 @@ namespace FinalVer_Assignment_2
             panel1.Size = new Size(340, 341);
             panel1.TabIndex = 34;
             // 
-            // button6
+            // btnListAllLibrarian
             // 
-            button6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Location = new Point(50, 258);
-            button6.Name = "button6";
-            button6.Size = new Size(238, 48);
-            button6.TabIndex = 35;
-            button6.Text = "List all librarian";
-            button6.UseVisualStyleBackColor = true;
+            btnListAllLibrarian.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnListAllLibrarian.Location = new Point(50, 258);
+            btnListAllLibrarian.Name = "btnListAllLibrarian";
+            btnListAllLibrarian.Size = new Size(238, 48);
+            btnListAllLibrarian.TabIndex = 35;
+            btnListAllLibrarian.Text = "List all librarian";
+            btnListAllLibrarian.UseVisualStyleBackColor = true;
+            btnListAllLibrarian.Click += btnListAllLibrarian_Click;
             // 
             // btnListUser
             // 
@@ -172,6 +173,7 @@ namespace FinalVer_Assignment_2
             Controls.Add(panel2);
             Name = "AdminForm";
             Text = "Admin";
+            Load += AdminForm_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
@@ -191,6 +193,6 @@ namespace FinalVer_Assignment_2
         private Button btnListUser;
         private Label label2;
         private Label label4;
-        private Button button6;
+        private Button btnListAllLibrarian;
     }
 }

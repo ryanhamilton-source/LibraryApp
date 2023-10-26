@@ -38,11 +38,11 @@ namespace FinalVer_Assignment_2
             label4 = new Label();
             label2 = new Label();
             panel1 = new Panel();
+            button1 = new Button();
             button5 = new Button();
             btnRegister = new Button();
             button4 = new Button();
-            button1 = new Button();
-            button3 = new Button();
+            btnLogOut = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -106,6 +106,16 @@ namespace FinalVer_Assignment_2
             panel1.Size = new Size(340, 341);
             panel1.TabIndex = 39;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(50, 254);
+            button1.Name = "button1";
+            button1.Size = new Size(238, 48);
+            button1.TabIndex = 35;
+            button1.Text = "Book Reservation";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // button5
             // 
             button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -136,32 +146,23 @@ namespace FinalVer_Assignment_2
             button4.Text = "Borrow Books";
             button4.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnLogOut
             // 
-            button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(50, 254);
-            button1.Name = "button1";
-            button1.Size = new Size(238, 48);
-            button1.TabIndex = 35;
-            button1.Text = "Book Reservation";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(670, 138);
-            button3.Name = "button3";
-            button3.Size = new Size(152, 48);
-            button3.TabIndex = 40;
-            button3.Text = "Log Out";
-            button3.UseVisualStyleBackColor = true;
+            btnLogOut.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogOut.Location = new Point(670, 138);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(152, 48);
+            btnLogOut.TabIndex = 40;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // UserForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(834, 607);
-            Controls.Add(button3);
+            Controls.Add(btnLogOut);
             Controls.Add(panel1);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -187,6 +188,6 @@ namespace FinalVer_Assignment_2
         private Button btnRegister;
         private Button button4;
         private Button button1;
-        private Button button3;
+        private Button btnLogOut;
     }
 }
