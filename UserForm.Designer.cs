@@ -40,8 +40,8 @@ namespace FinalVer_Assignment_2
             panel1 = new Panel();
             button1 = new Button();
             button5 = new Button();
-            btnRegister = new Button();
-            button4 = new Button();
+            btnSearch = new Button();
+            btnBorrowBooks = new Button();
             btnLogOut = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -99,8 +99,8 @@ namespace FinalVer_Assignment_2
             // 
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button5);
-            panel1.Controls.Add(btnRegister);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(btnSearch);
+            panel1.Controls.Add(btnBorrowBooks);
             panel1.Location = new Point(240, 189);
             panel1.Name = "panel1";
             panel1.Size = new Size(340, 341);
@@ -113,7 +113,7 @@ namespace FinalVer_Assignment_2
             button1.Name = "button1";
             button1.Size = new Size(238, 48);
             button1.TabIndex = 35;
-            button1.Text = "Book Reservation";
+            button1.Text = "View Borrow Books";
             button1.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -126,25 +126,26 @@ namespace FinalVer_Assignment_2
             button5.Text = "Return Books";
             button5.UseVisualStyleBackColor = true;
             // 
-            // btnRegister
+            // btnSearch
             // 
-            btnRegister.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegister.Location = new Point(50, 29);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(238, 48);
-            btnRegister.TabIndex = 29;
-            btnRegister.Text = "Search Books";
-            btnRegister.UseVisualStyleBackColor = true;
+            btnSearch.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.Location = new Point(50, 29);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(238, 48);
+            btnSearch.TabIndex = 29;
+            btnSearch.Text = "Search Books";
+            btnSearch.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnBorrowBooks
             // 
-            button4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(50, 102);
-            button4.Name = "button4";
-            button4.Size = new Size(238, 48);
-            button4.TabIndex = 33;
-            button4.Text = "Borrow Books";
-            button4.UseVisualStyleBackColor = true;
+            btnBorrowBooks.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBorrowBooks.Location = new Point(50, 102);
+            btnBorrowBooks.Name = "btnBorrowBooks";
+            btnBorrowBooks.Size = new Size(238, 48);
+            btnBorrowBooks.TabIndex = 33;
+            btnBorrowBooks.Text = "Borrow Books";
+            btnBorrowBooks.UseVisualStyleBackColor = true;
+            btnBorrowBooks.Click += btnBorrowBooks_Click;
             // 
             // btnLogOut
             // 
@@ -185,8 +186,8 @@ namespace FinalVer_Assignment_2
         private Label label2;
         private Panel panel1;
         private Button button5;
-        private Button btnRegister;
-        private Button button4;
+        private Button btnSearch;
+        private Button btnBorrowBooks;
         private Button button1;
         private Button btnLogOut;
     }

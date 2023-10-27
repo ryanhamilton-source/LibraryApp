@@ -10,6 +10,9 @@ namespace FinalVer_Assignment_2
         public static Admins admins = new Admins("admin.txt");
         public static Users users = new Users("user.txt");
         public static Librarians librarians = new Librarians("librarian.txt");
+        public static Books books = new Books("book.txt");
+        public static BorrowedBooks borrowedBooks = new BorrowedBooks("borrowedBooks.txt");
+
         [STAThread]
         static void Main()
         {

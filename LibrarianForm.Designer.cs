@@ -34,9 +34,9 @@ namespace FinalVer_Assignment_2
         {
             panel1 = new Panel();
             button5 = new Button();
-            btnRegister = new Button();
-            button4 = new Button();
-            button1 = new Button();
+            btnAddNewBooks = new Button();
+            btnSearchBook = new Button();
+            btnUpdateBook = new Button();
             button2 = new Button();
             panel2 = new Panel();
             label1 = new Label();
@@ -51,9 +51,9 @@ namespace FinalVer_Assignment_2
             // panel1
             // 
             panel1.Controls.Add(button5);
-            panel1.Controls.Add(btnRegister);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnAddNewBooks);
+            panel1.Controls.Add(btnSearchBook);
+            panel1.Controls.Add(btnUpdateBook);
             panel1.Controls.Add(button2);
             panel1.Location = new Point(269, 150);
             panel1.Name = "panel1";
@@ -70,35 +70,38 @@ namespace FinalVer_Assignment_2
             button5.Text = "Books Tracking";
             button5.UseVisualStyleBackColor = true;
             // 
-            // btnRegister
+            // btnAddNewBooks
             // 
-            btnRegister.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegister.Location = new Point(50, 35);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(238, 48);
-            btnRegister.TabIndex = 29;
-            btnRegister.Text = "Add New Books";
-            btnRegister.UseVisualStyleBackColor = true;
+            btnAddNewBooks.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddNewBooks.Location = new Point(50, 35);
+            btnAddNewBooks.Name = "btnAddNewBooks";
+            btnAddNewBooks.Size = new Size(238, 48);
+            btnAddNewBooks.TabIndex = 29;
+            btnAddNewBooks.Text = "Add New Books";
+            btnAddNewBooks.UseVisualStyleBackColor = true;
+            btnAddNewBooks.Click += btnAddNewBooks_Click;
             // 
-            // button4
+            // btnSearchBook
             // 
-            button4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(50, 102);
-            button4.Name = "button4";
-            button4.Size = new Size(238, 48);
-            button4.TabIndex = 33;
-            button4.Text = "Search Books";
-            button4.UseVisualStyleBackColor = true;
+            btnSearchBook.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearchBook.Location = new Point(50, 102);
+            btnSearchBook.Name = "btnSearchBook";
+            btnSearchBook.Size = new Size(238, 48);
+            btnSearchBook.TabIndex = 33;
+            btnSearchBook.Text = "Search Books";
+            btnSearchBook.UseVisualStyleBackColor = true;
+            btnSearchBook.Click += btnSearchBook_Click;
             // 
-            // button1
+            // btnUpdateBook
             // 
-            button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(50, 173);
-            button1.Name = "button1";
-            button1.Size = new Size(238, 48);
-            button1.TabIndex = 30;
-            button1.Text = "Update Book Details";
-            button1.UseVisualStyleBackColor = true;
+            btnUpdateBook.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUpdateBook.Location = new Point(50, 173);
+            btnUpdateBook.Name = "btnUpdateBook";
+            btnUpdateBook.Size = new Size(238, 48);
+            btnUpdateBook.TabIndex = 30;
+            btnUpdateBook.Text = "Update Book Details";
+            btnUpdateBook.UseVisualStyleBackColor = true;
+            btnUpdateBook.Click += btnUpdateBook_Click;
             // 
             // button2
             // 
@@ -192,9 +195,9 @@ namespace FinalVer_Assignment_2
 
         private Panel panel1;
         private Button button5;
-        private Button btnRegister;
-        private Button button4;
-        private Button button1;
+        private Button btnAddNewBooks;
+        private Button btnSearchBook;
+        private Button btnUpdateBook;
         private Button button2;
         private Panel panel2;
         private Label label1;

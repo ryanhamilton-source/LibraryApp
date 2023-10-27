@@ -21,3 +21,7 @@ C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug
 C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.AddLibrarianForm.resources
 C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.ListUserForm.resources
 C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.ListLibrarianForm.resources
+C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.AddNewBookForm.resources
+C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.ListBookForm.resources
+C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.UpdateBookDetailForm.resources
+C:\Users\User\source\repos\FinalVer_Assignment_2\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.BorrowBooksForm.resources

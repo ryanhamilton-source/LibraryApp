@@ -26,5 +26,13 @@ namespace FinalVer_Assignment_2
             this.Close();
             this.loginForm.Show();
         }
+
+        private void btnBorrowBooks_Click(object sender, EventArgs e)
+        {
+            BorrowBooksForm borrowBooksForm = new BorrowBooksForm();
+            borrowBooksForm.Show();
+            this.Hide();
+        }
+
     }
 }

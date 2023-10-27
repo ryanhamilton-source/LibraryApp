@@ -26,5 +26,26 @@ namespace FinalVer_Assignment_2
             this.Close();
             this.loginForm.Show();
         }
+
+        private void btnAddNewBooks_Click(object sender, EventArgs e)
+        {
+            AddNewBookForm addNewBookForm = new AddNewBookForm();
+            addNewBookForm.Show();
+            this.Hide();
+        }
+
+        private void btnSearchBook_Click(object sender, EventArgs e)
+        {
+            ListBookForm searchBookForm = new ListBookForm();
+            searchBookForm.Show();
+            this.Hide();
+        }
+
+        private void btnUpdateBook_Click(object sender, EventArgs e)
+        {
+            UpdateBookDetailForm updateBookDetailForm = new UpdateBookDetailForm();
+            updateBookDetailForm.Show();
+            this.Hide();
+        }
     }
 }
