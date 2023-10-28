@@ -53,3 +53,4 @@ C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\obj\Debug\net6.0
 C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.genruntimeconfig.cache
 C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\obj\Debug\net6.0-windows\ref\FinalVer_Assignment_2.dll
 C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.ReturnBooksForm.resources
+C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.ListBookFormUser.resources

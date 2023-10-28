@@ -45,8 +45,8 @@ namespace FinalVer_Assignment_2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            ListBookForm searchBookForm = new ListBookForm();
-            searchBookForm.Show();
+            ListBookFormUser listBookFormUser = new ListBookFormUser(currentUser);
+            listBookFormUser.Show();
             this.Hide();
         }
     }
