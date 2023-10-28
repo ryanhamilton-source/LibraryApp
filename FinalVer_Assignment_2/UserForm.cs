@@ -13,12 +13,14 @@ namespace FinalVer_Assignment_2
     public partial class UserForm : Form
     {
         private LoginForm loginForm;
-        public UserForm()
+        private User currentUser; // Store the currently logged-in user
+        public UserForm(User currentUser)
         {
             this.loginForm = new LoginForm();
             InitializeComponent();
             // Center the form on the screen
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.currentUser = currentUser;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -29,10 +31,16 @@ namespace FinalVer_Assignment_2
 
         private void btnBorrowBooks_Click(object sender, EventArgs e)
         {
-            BorrowBooksForm borrowBooksForm = new BorrowBooksForm();
+            BorrowBooksForm borrowBooksForm = new BorrowBooksForm(currentUser);
             borrowBooksForm.Show();
             this.Hide();
         }
 
+        private void btnReturnBooks_Click(object sender, EventArgs e)
+        {
+            ReturnBooksForm returnBooksForm = new ReturnBooksForm(currentUser);
+            returnBooksForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -12,96 +12,80 @@ namespace FinalVer_Assignment_2
 {
     public partial class BorrowBooksForm : Form
     {
-        private User? user;
+        private User currentUser; // Store the currently logged-in user
+        private BindingList<Book> availableBooks; // Binding list for available books
 
-        public BorrowBooksForm()
+        public BorrowBooksForm(User currentUser)
         {
             InitializeComponent();
+            this.currentUser = currentUser;
+
+            // Initialize the binding list with available books
+            availableBooks = new BindingList<Book>(Program.books.GetAvailableBooksList());
         }
 
-        DataTable table = new DataTable();
         private void BorrowBooksForm_Load(object sender, EventArgs e)
         {
-            table.Columns.Add("Book ID", typeof(int));
-            table.Columns.Add("Title", typeof(string));
-            table.Columns.Add("Author", typeof(string));
-            table.Columns.Add("Genre", typeof(string));
+            // Bind the DataGridView to the binding list
+            dataGridView1.DataSource = availableBooks;
 
-            foreach (Book book in Program.books.GetAvailableBooksList())
+            // Remove the auto-generated columns
+            dataGridView1.AutoGenerateColumns = false;
+
+            // Add a DataGridViewCheckBoxColumn for book selection
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
             {
-                table.Rows.Add(book.GetId(), book.GetTitle(), book.GetAuthor(), book.GetGenre());
-            }
-            dataGridView1.DataSource = table;
+                Name = "Select",
+                HeaderText = "Select",
+                DataPropertyName = "IsSelected",
+                FalseValue = false,
+                TrueValue = true,
+                IndeterminateValue = false,
+                ValueType = typeof(bool)
+            };
+            dataGridView1.Columns.Add(checkBoxColumn);
         }
-
         private void btnBorrowBooks_Click(object sender, EventArgs e)
         {
-            int maxBorrowLimit = 5; // Maximum number of books that can be borrowed
-            int selectedBookCount = 0;
-
-            if (user == null)
-            {
-                MessageBox.Show("User information is missing. Please log in.");
-                return;
-            }
-
-            List<BorrowedBook> borrowedBooks = new List<BorrowedBook>();
-
+            // Handle the "Borrow Books" button click event
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                DataGridViewCheckBoxCell? cell = row.Cells["CheckBoxColumn"] as DataGridViewCheckBoxCell;
+                DataGridViewCheckBoxCell? checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
 
-                if (cell != null && (bool)cell.Value)
+                if (Convert.ToBoolean(checkBoxCell?.Value) == true)
                 {
-                    int bookID = (int)row.Cells["Book ID"].Value;
+                    Book? selectedBook = row.DataBoundItem as Book;
 
-                    // Create a new BorrowedBook object for each selected book
-                    BorrowedBook borrowedBook = new BorrowedBook(bookID, user.GetId(), DateTime.Now, DateTime.Now.AddDays(14), false);
+                    // Check if the book is available
+                    if (selectedBook?.GetAvailableCopies() > 0)
+                    {
+                        // Create a BorrowedBook object and add it to the borrowed books list
+                        BorrowedBook borrowedBook = new BorrowedBook(selectedBook.GetId(), currentUser.GetId(), DateTime.Now, DateTime.Now.AddDays(14), false);
 
-                    // Add the borrowed book to the list
-                    borrowedBooks.Add(borrowedBook);
+                        // Append the borrowed book to the borrowedbooks.txt file
+                        BorrowedBooks borrowedBooks = new BorrowedBooks("borrowedbooks.txt");
+                        borrowedBooks.AddBorrowedBook(borrowedBook);
+                        borrowedBooks.AppendBorrowedBooks(new List<BorrowedBook> { borrowedBook }, "borrowedbooks.txt");
 
-                    selectedBookCount++;
+                        // Update the available copies
+                        selectedBook.SetAvailableCopies(selectedBook.GetAvailableCopies() - 1);
+                        Program.books.UpdateBookFile(selectedBook, "book.txt");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"The book '{selectedBook?.GetTitle()}' is not available for borrowing.");
+                    }
                 }
             }
 
-            if (selectedBookCount == 0)
-            {
-                MessageBox.Show("Please select at least one book to borrow.");
-            }
-            else if (selectedBookCount > maxBorrowLimit)
-            {
-                MessageBox.Show("You can only borrow up to 5 books at a time.");
-            }
-            else
-            {
-                // Add the borrowed books to the BorrowedBooks class
-                Program.borrowedBooks.AppendBorrowedBooks(borrowedBooks, "borrowedBooks.txt");
-
-                // Provide user feedback about the successful borrowing
-                MessageBox.Show("You have successfully borrowed the selected books.");
-
-                // Clear the selected checkboxes
-                ClearSelectedCheckboxes();
-            }
-        }
-
-        private void ClearSelectedCheckboxes()
-        {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                DataGridViewCheckBoxCell? cell = row.Cells["CheckBoxColumn"] as DataGridViewCheckBoxCell;
-
-                if (cell != null)
-                {
-                    cell.Value = false;
-                }
-            }
+            // Refresh the DataGridView to reflect the updated data
+            availableBooks.ResetBindings();
+            MessageBox.Show("Books have been successfully borrowed.");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            UserForm userForm = new UserForm();
+            UserForm userForm = new UserForm(currentUser);
             userForm.Show();
             this.Hide();
         }
