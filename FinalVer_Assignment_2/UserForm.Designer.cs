@@ -39,7 +39,7 @@ namespace FinalVer_Assignment_2
             label2 = new Label();
             panel1 = new Panel();
             button1 = new Button();
-            button5 = new Button();
+            btnReturnBooks = new Button();
             btnSearch = new Button();
             btnBorrowBooks = new Button();
             btnLogOut = new Button();
@@ -98,7 +98,7 @@ namespace FinalVer_Assignment_2
             // panel1
             // 
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(button5);
+            panel1.Controls.Add(btnReturnBooks);
             panel1.Controls.Add(btnSearch);
             panel1.Controls.Add(btnBorrowBooks);
             panel1.Location = new Point(240, 189);
@@ -116,15 +116,16 @@ namespace FinalVer_Assignment_2
             button1.Text = "View Borrow Books";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnReturnBooks
             // 
-            button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(50, 179);
-            button5.Name = "button5";
-            button5.Size = new Size(238, 48);
-            button5.TabIndex = 34;
-            button5.Text = "Return Books";
-            button5.UseVisualStyleBackColor = true;
+            btnReturnBooks.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReturnBooks.Location = new Point(50, 179);
+            btnReturnBooks.Name = "btnReturnBooks";
+            btnReturnBooks.Size = new Size(238, 48);
+            btnReturnBooks.TabIndex = 34;
+            btnReturnBooks.Text = "Return Books";
+            btnReturnBooks.UseVisualStyleBackColor = true;
+            btnReturnBooks.Click += btnReturnBooks_Click;
             // 
             // btnSearch
             // 
@@ -185,7 +186,7 @@ namespace FinalVer_Assignment_2
         private Label label4;
         private Label label2;
         private Panel panel1;
-        private Button button5;
+        private Button btnReturnBooks;
         private Button btnSearch;
         private Button btnBorrowBooks;
         private Button button1;

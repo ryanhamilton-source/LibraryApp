@@ -47,7 +47,7 @@ namespace FinalVer_Assignment_2
                         if (user != null)
                         {
                             MessageBox.Show("Login Successful.");
-                            UserForm userForm = new UserForm();
+                            UserForm userForm = new UserForm(user);
                             userForm.Show();
                             this.Hide();
                         }
