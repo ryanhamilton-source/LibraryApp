@@ -6,3 +6,6 @@
 *.editorconfig
 *.sln
 *.cache
+*.v2
+*.bin
+*.bin
