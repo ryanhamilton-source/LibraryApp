@@ -42,5 +42,12 @@ namespace FinalVer_Assignment_2
             returnBooksForm.Show();
             this.Hide();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            ListBookForm searchBookForm = new ListBookForm();
+            searchBookForm.Show();
+            this.Hide();
+        }
     }
 }

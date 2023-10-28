@@ -42,8 +42,6 @@ namespace FinalVer_Assignment_2
             label1 = new Label();
             label3 = new Label();
             btnLogOut = new Button();
-            label4 = new Label();
-            label2 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -153,32 +151,11 @@ namespace FinalVer_Assignment_2
             btnLogOut.UseVisualStyleBackColor = true;
             btnLogOut.Click += btnLogOut_Click;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(107, 138);
-            label4.Name = "label4";
-            label4.Size = new Size(101, 15);
-            label4.TabIndex = 39;
-            label4.Text = "//loggedin admin";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(12, 138);
-            label2.Name = "label2";
-            label2.Size = new Size(89, 15);
-            label2.TabIndex = 38;
-            label2.Text = "Session Admin:";
-            // 
             // LibrarianForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(919, 580);
-            Controls.Add(label4);
-            Controls.Add(label2);
             Controls.Add(btnLogOut);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -188,7 +165,6 @@ namespace FinalVer_Assignment_2
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -203,7 +179,5 @@ namespace FinalVer_Assignment_2
         private Label label1;
         private Label label3;
         private Button btnLogOut;
-        private Label label4;
-        private Label label2;
     }
 }
