@@ -1,3 +1,6 @@
 
 .vs/FinalVer_Assignment_2/FileContentIndex/1bdfe6a4-597a-49dc-8f77-c98677d712a7.vsidx
 *.vsidx
+*.cs
+*.cache
+*.editorconfig
