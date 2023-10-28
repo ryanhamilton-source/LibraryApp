@@ -32,7 +32,6 @@
             label1 = new Label();
             label3 = new Label();
             dataGridView1 = new DataGridView();
-            CheckBoxColumn = new DataGridViewCheckBoxColumn();
             btnBorrowBooks = new Button();
             btnBack = new Button();
             panel2.SuspendLayout();
@@ -71,18 +70,12 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CheckBoxColumn });
             dataGridView1.Location = new Point(131, 166);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(526, 188);
             dataGridView1.TabIndex = 39;
-            // 
-            // CheckBoxColumn
-            // 
-            CheckBoxColumn.HeaderText = "Column1";
-            CheckBoxColumn.Name = "CheckBoxColumn";
             // 
             // btnBorrowBooks
             // 
@@ -132,6 +125,5 @@
         private DataGridView dataGridView1;
         private Button btnBorrowBooks;
         private Button btnBack;
-        private DataGridViewCheckBoxColumn CheckBoxColumn;
     }
 }
