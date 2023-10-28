@@ -63,9 +63,9 @@ namespace FinalVer_Assignment_2
                         BorrowedBook borrowedBook = new BorrowedBook(selectedBook.GetId(), currentUser.GetId(), DateTime.Now, DateTime.Now.AddDays(14), false);
 
                         // Append the borrowed book to the borrowedbooks.txt file
-                        BorrowedBooks borrowedBooks = new BorrowedBooks("borrowedbooks.txt");
+                        BorrowedBooks borrowedBooks = new BorrowedBooks("borrowedBooks.txt");
                         borrowedBooks.AddBorrowedBook(borrowedBook);
-                        borrowedBooks.AppendBorrowedBooks(new List<BorrowedBook> { borrowedBook }, "borrowedbooks.txt");
+                        borrowedBooks.AppendBorrowedBooks(new List<BorrowedBook> { borrowedBook }, "borrowedBooks.txt");
 
                         // Update the available copies
                         selectedBook.SetAvailableCopies(selectedBook.GetAvailableCopies() - 1);
