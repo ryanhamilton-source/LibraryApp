@@ -33,7 +33,7 @@ namespace FinalVer_Assignment_2
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button5 = new Button();
+            btnBooksTracking = new Button();
             btnAddNewBooks = new Button();
             btnSearchBook = new Button();
             btnUpdateBook = new Button();
@@ -48,7 +48,7 @@ namespace FinalVer_Assignment_2
             // 
             // panel1
             // 
-            panel1.Controls.Add(button5);
+            panel1.Controls.Add(btnBooksTracking);
             panel1.Controls.Add(btnAddNewBooks);
             panel1.Controls.Add(btnSearchBook);
             panel1.Controls.Add(btnUpdateBook);
@@ -59,16 +59,17 @@ namespace FinalVer_Assignment_2
             panel1.Size = new Size(486, 650);
             panel1.TabIndex = 35;
             // 
-            // button5
+            // BtnBooksTracking
             // 
-            button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(71, 535);
-            button5.Margin = new Padding(4, 5, 4, 5);
-            button5.Name = "button5";
-            button5.Size = new Size(340, 80);
-            button5.TabIndex = 34;
-            button5.Text = "Books Tracking";
-            button5.UseVisualStyleBackColor = true;
+            btnBooksTracking.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBooksTracking.Location = new Point(71, 535);
+            btnBooksTracking.Margin = new Padding(4, 5, 4, 5);
+            btnBooksTracking.Name = "BtnBooksTracking";
+            btnBooksTracking.Size = new Size(340, 80);
+            btnBooksTracking.TabIndex = 34;
+            btnBooksTracking.Text = "Books Tracking";
+            btnBooksTracking.UseVisualStyleBackColor = true;
+            btnBooksTracking.Click += btnBooksTracking_Click;
             // 
             // btnAddNewBooks
             // 
@@ -117,8 +118,6 @@ namespace FinalVer_Assignment_2
             btnDeleteBooks.Text = "Delete Books";
             btnDeleteBooks.UseVisualStyleBackColor = true;
             btnDeleteBooks.Click += btnDeleteBooks_Click;
-
-
             // 
             // panel2
             // 
@@ -184,7 +183,7 @@ namespace FinalVer_Assignment_2
         #endregion
 
         private Panel panel1;
-        private Button button5;
+        private Button btnBooksTracking;
         private Button btnAddNewBooks;
         private Button btnSearchBook;
         private Button btnUpdateBook;

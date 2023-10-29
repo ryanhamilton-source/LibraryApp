@@ -55,5 +55,12 @@ namespace FinalVer_Assignment_2
             deleteBookForm.Show();
             this.Hide();
         }
+        private void btnBooksTracking_Click(object sender, EventArgs e)
+        {
+            BooksTrackingForm booksTrackingForm = new BooksTrackingForm(this);
+            booksTrackingForm.Show();
+            this.Hide();
+
+        }
     }
 }
