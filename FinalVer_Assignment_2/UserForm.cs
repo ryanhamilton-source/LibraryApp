@@ -49,5 +49,12 @@ namespace FinalVer_Assignment_2
             listBookFormUser.Show();
             this.Hide();
         }
+
+        private void btnViewBorrowBooks_Click(object sender, EventArgs e)
+        {
+            ViewBorrowedBooksForm viewBorrowedBooksForm = new ViewBorrowedBooksForm(currentUser);
+            viewBorrowedBooksForm.Show();
+            this.Hide();
+        }
     }
 }

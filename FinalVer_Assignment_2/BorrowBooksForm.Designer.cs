@@ -42,7 +42,7 @@
             // 
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(113, 12);
+            panel2.Location = new Point(128, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(544, 113);
             panel2.TabIndex = 38;
@@ -70,13 +70,12 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(131, 166);
+            dataGridView1.Location = new Point(206, 155);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(526, 188);
+            dataGridView1.Size = new Size(397, 188);
             dataGridView1.TabIndex = 39;
-            dataGridView1.Refresh();
             // 
             // btnBorrowBooks
             // 

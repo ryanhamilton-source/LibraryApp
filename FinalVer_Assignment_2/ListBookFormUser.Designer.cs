@@ -43,7 +43,7 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnBack.Location = new Point(21, 126);
+            btnBack.Location = new Point(12, 108);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(103, 32);
             btnBack.TabIndex = 57;
@@ -82,11 +82,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(151, 192);
+            dataGridView1.Location = new Point(115, 191);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(515, 218);
+            dataGridView1.Size = new Size(570, 218);
             dataGridView1.TabIndex = 53;
             // 
             // panel2

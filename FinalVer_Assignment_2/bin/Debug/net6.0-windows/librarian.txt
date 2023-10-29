@@ -6,3 +6,4 @@
 20005,eEpdRTlr,marko tan,marko@gmail.com,2222313345,95 Harris Street Ultimo NSW 2007
 20006,s2Og5OyZ,Brandon Don,brandon@gmail.com,0455332266,702 Harris Street Ultimo NSW 2006
 20007,vJlWPrJz,Bobbie Brown,bobbie@gmail.com,0455321123,66 Harris Street Ultimo  NSW 2007
+20008,iJcsINKH,Michael Lee,michael@gmail.com,0433245675,55 Harris Street Ultimo NSW 2007

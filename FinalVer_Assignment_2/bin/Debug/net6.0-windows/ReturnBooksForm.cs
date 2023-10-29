@@ -21,6 +21,10 @@ namespace FinalVer_Assignment_2
             this.currentUser = currentUser;
             LoadBorrowedBooksData();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Set properties for automatic sizing
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         private void LoadBorrowedBooksData()

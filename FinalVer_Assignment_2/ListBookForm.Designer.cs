@@ -109,7 +109,7 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnBack.Location = new Point(12, 126);
+            btnBack.Location = new Point(12, 103);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(103, 32);
             btnBack.TabIndex = 51;

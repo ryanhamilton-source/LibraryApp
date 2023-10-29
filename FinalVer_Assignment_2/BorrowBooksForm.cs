@@ -23,6 +23,10 @@ namespace FinalVer_Assignment_2
             // Initialize the binding list with available books
             availableBooks = new BindingList<Book>(Program.books.GetAvailableBooksList());
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Set properties for automatic sizing
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         private void BorrowBooksForm_Load(object sender, EventArgs e)

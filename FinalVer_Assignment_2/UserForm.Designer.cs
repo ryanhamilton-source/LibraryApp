@@ -36,7 +36,7 @@ namespace FinalVer_Assignment_2
             label1 = new Label();
             label3 = new Label();
             panel1 = new Panel();
-            button1 = new Button();
+            btnViewBorrowBooks = new Button();
             btnReturnBooks = new Button();
             btnSearch = new Button();
             btnBorrowBooks = new Button();
@@ -76,7 +76,7 @@ namespace FinalVer_Assignment_2
             // 
             // panel1
             // 
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnViewBorrowBooks);
             panel1.Controls.Add(btnReturnBooks);
             panel1.Controls.Add(btnSearch);
             panel1.Controls.Add(btnBorrowBooks);
@@ -85,15 +85,16 @@ namespace FinalVer_Assignment_2
             panel1.Size = new Size(340, 341);
             panel1.TabIndex = 39;
             // 
-            // button1
+            // btnViewBorrowBooks
             // 
-            button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(50, 254);
-            button1.Name = "button1";
-            button1.Size = new Size(238, 48);
-            button1.TabIndex = 35;
-            button1.Text = "View Borrow Books";
-            button1.UseVisualStyleBackColor = true;
+            btnViewBorrowBooks.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnViewBorrowBooks.Location = new Point(50, 254);
+            btnViewBorrowBooks.Name = "btnViewBorrowBooks";
+            btnViewBorrowBooks.Size = new Size(238, 48);
+            btnViewBorrowBooks.TabIndex = 35;
+            btnViewBorrowBooks.Text = "View Borrow Books";
+            btnViewBorrowBooks.UseVisualStyleBackColor = true;
+            btnViewBorrowBooks.Click += btnViewBorrowBooks_Click;
             // 
             // btnReturnBooks
             // 
@@ -164,7 +165,7 @@ namespace FinalVer_Assignment_2
         private Button btnReturnBooks;
         private Button btnSearch;
         private Button btnBorrowBooks;
-        private Button button1;
+        private Button btnViewBorrowBooks;
         private Button btnLogOut;
     }
 }
