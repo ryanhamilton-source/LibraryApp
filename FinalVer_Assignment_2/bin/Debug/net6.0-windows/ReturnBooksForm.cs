@@ -12,38 +12,31 @@ namespace FinalVer_Assignment_2
 {
     public partial class ReturnBooksForm : Form
     {
-        private User currentUser; // Store the currently logged-in user
+        private User currentUser;
         private BindingList<BorrowedBook> borrowedBooks;
 
         public ReturnBooksForm(User currentUser)
         {
             InitializeComponent();
             this.currentUser = currentUser;
-
-            // Load the borrowed books list every time the form is instantiated
-            LoadBorrowedBooksData(); // Added this method call
-
+            LoadBorrowedBooksData();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void LoadBorrowedBooksData() // Added this new method
+        private void LoadBorrowedBooksData()
         {
             borrowedBooks = new BindingList<BorrowedBook>(Program.borrowedBooks.GetBorrowedBooksList());
         }
+
         private void ReturnBooksForm_Load(object sender, EventArgs e)
         {
-            // Filter the borrowedBooks list to include only the books borrowed by the current user and not yet returned
             var userBorrowedBooks = borrowedBooks
                 .Where(b => b.GetUserID() == currentUser.GetId() && !b.GetIsReturned())
                 .ToList();
 
-            // Bind the DataGridView to the filtered list
             dataGridView1.DataSource = userBorrowedBooks;
-
-            // Remove the auto-generated columns
             dataGridView1.AutoGenerateColumns = false;
 
-            // Add a DataGridViewCheckBoxColumn for book selection
             DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
             {
                 Name = "Select",
@@ -56,31 +49,26 @@ namespace FinalVer_Assignment_2
             };
             dataGridView1.Columns.Add(checkBoxColumn);
         }
-        
-       private void btnReturnBooks_Click_1(object sender, EventArgs e)
-{
-    // List to store books that are marked for return
-    List<BorrowedBook> booksToReturn = new List<BorrowedBook>();
 
-    foreach (DataGridViewRow row in dataGridView1.Rows)
-    {
-        DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
-        if (Convert.ToBoolean(checkBoxCell?.Value) == true)
+        private void btnReturnBooks_Click_1(object sender, EventArgs e)
         {
-            BorrowedBook borrowedBook = row.DataBoundItem as BorrowedBook;
-            if (borrowedBook != null)
+            List<BorrowedBook> booksToReturn = new List<BorrowedBook>();
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                borrowedBook.SetIsReturned(true); // Mark the book as returned
-
-                // Add to the list
-                booksToReturn.Add(borrowedBook);
-
-                // Increment available copies of the book
-                Book returnedBook = GetBookById(borrowedBook.GetBookID());
-                returnedBook.SetAvailableCopies(returnedBook.GetAvailableCopies() + 1);
+                DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
+                if (Convert.ToBoolean(checkBoxCell?.Value) == true)
+                {
+                    BorrowedBook borrowedBook = row.DataBoundItem as BorrowedBook;
+                    if (borrowedBook != null)
+                    {
+                        borrowedBook.SetIsReturned(true);
+                        booksToReturn.Add(borrowedBook);
+                        Book returnedBook = GetBookById(borrowedBook.GetBookID());
+                        returnedBook.SetAvailableCopies(returnedBook.GetAvailableCopies() + 1);
+                    }
+                }
             }
-        }
-    }
 
             if (booksToReturn.Count == 0)
             {
@@ -89,31 +77,28 @@ namespace FinalVer_Assignment_2
             else
             {
                 Program.borrowedBooks.UpdateBorrowedBooksFile(booksToReturn, "borrowedBooks.txt");
-
                 MessageBox.Show("Selected books have been successfully returned.");
-
-                // After returning books, refresh the borrowed books data and then refresh the DataGridView
-                LoadBorrowedBooksData(); // Refresh the data
-                RefreshBorrowedBooksDataGridView(); // Refresh the view
+                LoadBorrowedBooksData();
+                RefreshBorrowedBooksDataGridView();
             }
         }
 
-
         private void RefreshBorrowedBooksDataGridView()
         {
-            // Filter the borrowedBooks list to include only the books borrowed by the current user and not yet returned
             var userBorrowedBooks = borrowedBooks
                 .Where(b => b.GetUserID() == currentUser.GetId() && !b.GetIsReturned())
                 .ToList();
 
-            // Clear the DataGridView's data source
             dataGridView1.DataSource = null;
-
-            // Set the filtered list as the data source for the DataGridView
             dataGridView1.DataSource = userBorrowedBooks;
-
-            // Now, clear the selection in the DataGridView
             dataGridView1.ClearSelection();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadBorrowedBooksData();
+            RefreshBorrowedBooksDataGridView();
+            MessageBox.Show("Refreshed Success.");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -122,6 +107,7 @@ namespace FinalVer_Assignment_2
             userForm.Show();
             this.Hide();
         }
+
         private Book GetBookById(int bookId)
         {
             foreach (Book book in Program.books.GetBooksList())
@@ -132,8 +118,7 @@ namespace FinalVer_Assignment_2
                 }
             }
 
-            throw new Exception($"Book with ID {bookId} not found."); // Custom exception to handle the case where the book is not found
+            throw new Exception($"Book with ID {bookId} not found.");
         }
-
     }
 }
