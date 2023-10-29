@@ -35,8 +35,6 @@ namespace FinalVer_Assignment_2
             panel2 = new Panel();
             label1 = new Label();
             label3 = new Label();
-            label4 = new Label();
-            label2 = new Label();
             panel1 = new Panel();
             button1 = new Button();
             btnReturnBooks = new Button();
@@ -75,25 +73,6 @@ namespace FinalVer_Assignment_2
             label3.Size = new Size(65, 32);
             label3.TabIndex = 7;
             label3.Text = "User";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(94, 138);
-            label4.Name = "label4";
-            label4.Size = new Size(89, 15);
-            label4.TabIndex = 38;
-            label4.Text = "//loggedin user";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(12, 138);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 15);
-            label2.TabIndex = 37;
-            label2.Text = "Session User:";
             // 
             // panel1
             // 
@@ -136,6 +115,7 @@ namespace FinalVer_Assignment_2
             btnSearch.TabIndex = 29;
             btnSearch.Text = "Search Books";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnBorrowBooks
             // 
@@ -166,8 +146,6 @@ namespace FinalVer_Assignment_2
             ClientSize = new Size(834, 607);
             Controls.Add(btnLogOut);
             Controls.Add(panel1);
-            Controls.Add(label4);
-            Controls.Add(label2);
             Controls.Add(panel2);
             Name = "UserForm";
             Text = "User";
@@ -175,7 +153,6 @@ namespace FinalVer_Assignment_2
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -183,8 +160,6 @@ namespace FinalVer_Assignment_2
         private Panel panel2;
         private Label label1;
         private Label label3;
-        private Label label4;
-        private Label label2;
         private Panel panel1;
         private Button btnReturnBooks;
         private Button btnSearch;

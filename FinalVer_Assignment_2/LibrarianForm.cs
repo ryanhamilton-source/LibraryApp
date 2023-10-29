@@ -47,5 +47,20 @@ namespace FinalVer_Assignment_2
             updateBookDetailForm.Show();
             this.Hide();
         }
+        //Ryan's updates
+
+        private void btnDeleteBooks_Click(object sender, EventArgs e)
+        {
+            DeleteBookForm deleteBookForm = new DeleteBookForm(this);
+            deleteBookForm.Show();
+            this.Hide();
+        }
+        private void btnBooksTracking_Click(object sender, EventArgs e)
+        {
+            BooksTrackingForm booksTrackingForm = new BooksTrackingForm(this);
+            booksTrackingForm.Show();
+            this.Hide();
+
+        }
     }
 }

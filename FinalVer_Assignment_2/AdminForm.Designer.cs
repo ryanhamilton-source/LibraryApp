@@ -41,8 +41,6 @@ namespace FinalVer_Assignment_2
             panel1 = new Panel();
             btnListAllLibrarian = new Button();
             btnListUser = new Button();
-            label2 = new Label();
-            label4 = new Label();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -142,32 +140,11 @@ namespace FinalVer_Assignment_2
             btnListUser.UseVisualStyleBackColor = true;
             btnListUser.Click += btnListUser_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(12, 143);
-            label2.Name = "label2";
-            label2.Size = new Size(89, 15);
-            label2.TabIndex = 35;
-            label2.Text = "Session Admin:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(107, 143);
-            label4.Name = "label4";
-            label4.Size = new Size(101, 15);
-            label4.TabIndex = 36;
-            label4.Text = "//loggedin admin";
-            // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(842, 557);
-            Controls.Add(label4);
-            Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(btnLogOut);
             Controls.Add(panel2);
@@ -178,7 +155,6 @@ namespace FinalVer_Assignment_2
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -191,8 +167,6 @@ namespace FinalVer_Assignment_2
         private Button btnAddLibrarian;
         private Panel panel1;
         private Button btnListUser;
-        private Label label2;
-        private Label label4;
         private Button btnListAllLibrarian;
     }
 }

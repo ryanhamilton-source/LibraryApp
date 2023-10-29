@@ -147,6 +147,19 @@ namespace FinalVer_Assignment_2
         {
             return books.Where(book => book.availableCopies > 0).ToList();
         }
+        public void SaveBooksToFile(string filepath)
+        {
+            List<string> lines = new List<string>();
+
+            foreach (Book book in books)
+            {
+                string line = $"{book.GetId()},{book.GetTitle()},{book.GetAuthor()},{book.GetGenre()},{book.GetTotalCopies()},{book.GetAvailableCopies()}";
+                lines.Add(line);
+            }
+
+            File.WriteAllLines(filepath, lines);
+        }
+
     }
 }
 
