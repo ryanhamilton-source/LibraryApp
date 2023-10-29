@@ -71,6 +71,7 @@ namespace FinalVer_Assignment_2
                         // Update the available copies
                         selectedBook.SetAvailableCopies(selectedBook.GetAvailableCopies() - 1);
                         Program.books.UpdateBookFile(selectedBook, "book.txt");
+
                     }
                     else
                     {

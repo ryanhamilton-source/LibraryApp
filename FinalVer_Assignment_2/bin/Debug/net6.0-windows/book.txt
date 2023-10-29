@@ -1,2 +1,2 @@
-2,Ghost Buster,david Milne,Mystery,10,8
-3,Dungeon and King,Brandon Lee,Fantasy,10,8
+1,Ghost Buster,david Milne,Mystery,10,7
+2,Dungeon and King,Brandon Lee,Fantasy,10,7

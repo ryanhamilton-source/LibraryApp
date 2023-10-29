@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace FinalVer_Assignment_2
 {
@@ -73,6 +74,25 @@ namespace FinalVer_Assignment_2
             catch (Exception e)
             {
                 Console.WriteLine("An error occurred while appending the user data: " + e.Message);
+            }
+        }
+        public void UpdateBorrowedBooksFile(List<BorrowedBook> borrowedBooks, string filepath)
+        {
+            try
+            {
+                List<string> lines = new List<string>();
+
+                foreach (BorrowedBook borrowedBook in borrowedBooks)
+                {
+                    string updatedBorrowedBook = $"{borrowedBook.GetBookID()}, {borrowedBook.GetUserID()}, {borrowedBook.GetBorrowDate()},{borrowedBook.GetDueDate()}, {borrowedBook.GetIsReturned()}";
+                    lines.Add(updatedBorrowedBook);
+                }
+
+                File.WriteAllLines(filepath, lines);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("An error occurred while updating the borrowed books file: " + e.Message);
             }
         }
 
