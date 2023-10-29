@@ -89,3 +89,5 @@ C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\obj\Debug\net6.0
 C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\obj\Debug\net6.0-windows\FinalVer_Assignment_2.DeleteBookForm.resources
 C:\Users\Admin\OneDrive\Desktop\LibraryApp\LibraryApp\FinalVer_Assignment_2\bin\Debug\net6.0-windows\ReturnBooksForm.cs
 C:\Users\Admin\OneDrive\Desktop\LibraryApp\LibraryApp\FinalVer_Assignment_2\bin\Debug\net6.0-windows\BorrowedBook.cs
+C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\bin\Debug\net6.0-windows\BorrowedBook.cs
+C:\Users\User\Documents\GitHub\LibraryApp\FinalVer_Assignment_2\bin\Debug\net6.0-windows\ReturnBooksForm.cs

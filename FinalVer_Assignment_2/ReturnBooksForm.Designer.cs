@@ -42,21 +42,19 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(214, 260);
-            dataGridView1.Margin = new Padding(4, 5, 4, 5);
+            dataGridView1.Location = new Point(174, 154);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(773, 342);
+            dataGridView1.Size = new Size(481, 202);
             dataGridView1.TabIndex = 46;
             // 
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnBack.Location = new Point(19, 218);
-            btnBack.Margin = new Padding(4, 5, 4, 5);
+            btnBack.Location = new Point(12, 105);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(147, 53);
+            btnBack.Size = new Size(103, 32);
             btnBack.TabIndex = 45;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -65,33 +63,30 @@
             // btnReturnBooks
             // 
             btnReturnBooks.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnReturnBooks.Location = new Point(470, 638);
-            btnReturnBooks.Margin = new Padding(4, 5, 4, 5);
+            btnReturnBooks.Location = new Point(322, 382);
             btnReturnBooks.Name = "btnReturnBooks";
-            btnReturnBooks.Size = new Size(250, 73);
+            btnReturnBooks.Size = new Size(175, 44);
             btnReturnBooks.TabIndex = 44;
             btnReturnBooks.Text = "Return Books";
             btnReturnBooks.UseVisualStyleBackColor = true;
-           
+            btnReturnBooks.Click += btnRefresh_Click;
             // 
             // panel2
             // 
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(210, 20);
-            panel2.Margin = new Padding(4, 5, 4, 5);
+            panel2.Location = new Point(147, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(777, 188);
+            panel2.Size = new Size(544, 113);
             panel2.TabIndex = 43;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(69, 15);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(48, 9);
             label1.Name = "label1";
-            label1.Size = new Size(678, 65);
+            label1.Size = new Size(448, 45);
             label1.TabIndex = 0;
             label1.Text = "Library Management System";
             // 
@@ -99,36 +94,32 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(261, 113);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(183, 68);
             label3.Name = "label3";
-            label3.Size = new Size(247, 48);
+            label3.Size = new Size(167, 32);
             label3.TabIndex = 7;
             label3.Text = "Return Books";
             // 
             // btnRefresh
             // 
             btnRefresh.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnRefresh.Location = new Point(1009, 533);
-            btnRefresh.Margin = new Padding(4, 5, 4, 5);
+            btnRefresh.Location = new Point(682, 154);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(147, 53);
+            btnRefresh.Size = new Size(103, 32);
             btnRefresh.TabIndex = 47;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
-            btnReturnBooks.Click += btnRefresh_Click;
             // 
             // ReturnBooksForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1181, 752);
+            ClientSize = new Size(827, 451);
             Controls.Add(btnRefresh);
             Controls.Add(dataGridView1);
             Controls.Add(btnBack);
             Controls.Add(btnReturnBooks);
             Controls.Add(panel2);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "ReturnBooksForm";
             Text = "ReturnBooksForm";
             Load += ReturnBooksForm_Load;

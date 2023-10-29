@@ -10,11 +10,10 @@ namespace FinalVer_Assignment_2
     {
         // Properties
         public int bookID { get; set; }
-        public int userID { get; set; } // Changed this to a property
+        public int userID;
         public DateTime borrowDate { get; set; }
         public DateTime dueDate { get; set; }
-        public bool isReturned { get; set; } // Added this property
-        public bool IsSelected { get; set; } = false; // The checkbox binding property
+        public bool isReturned;
 
         // Constructor
         public BorrowedBook(int bookID, int userID, DateTime borrowDate, DateTime dueDate, bool isReturned)
