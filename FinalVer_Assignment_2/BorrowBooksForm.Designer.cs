@@ -76,6 +76,7 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(526, 188);
             dataGridView1.TabIndex = 39;
+            dataGridView1.Refresh();
             // 
             // btnBorrowBooks
             // 

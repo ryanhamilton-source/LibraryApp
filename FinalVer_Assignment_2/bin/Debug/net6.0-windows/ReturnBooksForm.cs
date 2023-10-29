@@ -56,31 +56,31 @@ namespace FinalVer_Assignment_2
             };
             dataGridView1.Columns.Add(checkBoxColumn);
         }
+        
+       private void btnReturnBooks_Click_1(object sender, EventArgs e)
+{
+    // List to store books that are marked for return
+    List<BorrowedBook> booksToReturn = new List<BorrowedBook>();
 
-        private void btnReturnBooks_Click_1(object sender, EventArgs e)
+    foreach (DataGridViewRow row in dataGridView1.Rows)
+    {
+        DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
+        if (Convert.ToBoolean(checkBoxCell?.Value) == true)
         {
-            // List to store books that are marked for return
-            List<BorrowedBook> booksToReturn = new List<BorrowedBook>();
-
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            BorrowedBook borrowedBook = row.DataBoundItem as BorrowedBook;
+            if (borrowedBook != null)
             {
-                DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
-                if (Convert.ToBoolean(checkBoxCell?.Value) == true)
-                {
-                    BorrowedBook borrowedBook = row.DataBoundItem as BorrowedBook;
-                    if (borrowedBook != null)
-                    {
-                        borrowedBook.SetIsReturned(true); // Mark the book as returned
+                borrowedBook.SetIsReturned(true); // Mark the book as returned
 
-                        // Add to the list
-                        booksToReturn.Add(borrowedBook);
+                // Add to the list
+                booksToReturn.Add(borrowedBook);
 
-                        // Increment available copies of the book
-                        Book returnedBook = GetBookById(borrowedBook.GetBookID());
-                        returnedBook.SetAvailableCopies(returnedBook.GetAvailableCopies() + 1);
-                    }
-                }
+                // Increment available copies of the book
+                Book returnedBook = GetBookById(borrowedBook.GetBookID());
+                returnedBook.SetAvailableCopies(returnedBook.GetAvailableCopies() + 1);
             }
+        }
+    }
 
             if (booksToReturn.Count == 0)
             {
