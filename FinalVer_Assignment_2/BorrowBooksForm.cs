@@ -22,6 +22,7 @@ namespace FinalVer_Assignment_2
 
             // Initialize the binding list with available books
             availableBooks = new BindingList<Book>(Program.books.GetAvailableBooksList());
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void BorrowBooksForm_Load(object sender, EventArgs e)
