@@ -8,10 +8,10 @@ namespace FinalVer_Assignment_2
 {
     public class BorrowedBook
     {
-        public int bookID;
+        public int bookID { get; set; }
         public int userID;
-        public DateTime borrowDate;
-        public DateTime dueDate;
+        public DateTime borrowDate { get; set; }
+        public DateTime dueDate { get; set; }
         public bool isReturned;
 
         public BorrowedBook(int bookID, int userID, DateTime borrowDate, DateTime dueDate, bool isReturned)
