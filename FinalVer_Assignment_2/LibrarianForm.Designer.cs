@@ -37,7 +37,7 @@ namespace FinalVer_Assignment_2
             btnAddNewBooks = new Button();
             btnSearchBook = new Button();
             btnUpdateBook = new Button();
-            button2 = new Button();
+            btnDeleteBooks = new Button();
             panel2 = new Panel();
             label1 = new Label();
             label3 = new Label();
@@ -52,18 +52,20 @@ namespace FinalVer_Assignment_2
             panel1.Controls.Add(btnAddNewBooks);
             panel1.Controls.Add(btnSearchBook);
             panel1.Controls.Add(btnUpdateBook);
-            panel1.Controls.Add(button2);
-            panel1.Location = new Point(269, 150);
+            panel1.Controls.Add(btnDeleteBooks);
+            panel1.Location = new Point(384, 250);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(340, 390);
+            panel1.Size = new Size(486, 650);
             panel1.TabIndex = 35;
             // 
             // button5
             // 
             button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(50, 321);
+            button5.Location = new Point(71, 535);
+            button5.Margin = new Padding(4, 5, 4, 5);
             button5.Name = "button5";
-            button5.Size = new Size(238, 48);
+            button5.Size = new Size(340, 80);
             button5.TabIndex = 34;
             button5.Text = "Books Tracking";
             button5.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@ namespace FinalVer_Assignment_2
             // btnAddNewBooks
             // 
             btnAddNewBooks.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAddNewBooks.Location = new Point(50, 35);
+            btnAddNewBooks.Location = new Point(71, 58);
+            btnAddNewBooks.Margin = new Padding(4, 5, 4, 5);
             btnAddNewBooks.Name = "btnAddNewBooks";
-            btnAddNewBooks.Size = new Size(238, 48);
+            btnAddNewBooks.Size = new Size(340, 80);
             btnAddNewBooks.TabIndex = 29;
             btnAddNewBooks.Text = "Add New Books";
             btnAddNewBooks.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@ namespace FinalVer_Assignment_2
             // btnSearchBook
             // 
             btnSearchBook.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearchBook.Location = new Point(50, 102);
+            btnSearchBook.Location = new Point(71, 170);
+            btnSearchBook.Margin = new Padding(4, 5, 4, 5);
             btnSearchBook.Name = "btnSearchBook";
-            btnSearchBook.Size = new Size(238, 48);
+            btnSearchBook.Size = new Size(340, 80);
             btnSearchBook.TabIndex = 33;
             btnSearchBook.Text = "Search Books";
             btnSearchBook.UseVisualStyleBackColor = true;
@@ -93,40 +97,47 @@ namespace FinalVer_Assignment_2
             // btnUpdateBook
             // 
             btnUpdateBook.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpdateBook.Location = new Point(50, 173);
+            btnUpdateBook.Location = new Point(71, 288);
+            btnUpdateBook.Margin = new Padding(4, 5, 4, 5);
             btnUpdateBook.Name = "btnUpdateBook";
-            btnUpdateBook.Size = new Size(238, 48);
+            btnUpdateBook.Size = new Size(340, 80);
             btnUpdateBook.TabIndex = 30;
             btnUpdateBook.Text = "Update Book Details";
             btnUpdateBook.UseVisualStyleBackColor = true;
             btnUpdateBook.Click += btnUpdateBook_Click;
             // 
-            // button2
+            // btnDeleteBooks
             // 
-            button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(50, 245);
-            button2.Name = "button2";
-            button2.Size = new Size(238, 48);
-            button2.TabIndex = 31;
-            button2.Text = "Delete Books";
-            button2.UseVisualStyleBackColor = true;
+            btnDeleteBooks.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDeleteBooks.Location = new Point(71, 408);
+            btnDeleteBooks.Margin = new Padding(4, 5, 4, 5);
+            btnDeleteBooks.Name = "btnDeleteBooks";
+            btnDeleteBooks.Size = new Size(340, 80);
+            btnDeleteBooks.TabIndex = 31;
+            btnDeleteBooks.Text = "Delete Books";
+            btnDeleteBooks.UseVisualStyleBackColor = true;
+            btnDeleteBooks.Click += btnDeleteBooks_Click;
+
+
             // 
             // panel2
             // 
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(168, 12);
+            panel2.Location = new Point(240, 20);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(544, 113);
+            panel2.Size = new Size(777, 188);
             panel2.TabIndex = 36;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(48, 9);
+            label1.Location = new Point(69, 15);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(448, 45);
+            label1.Size = new Size(678, 65);
             label1.TabIndex = 0;
             label1.Text = "Library Management System";
             // 
@@ -134,18 +145,20 @@ namespace FinalVer_Assignment_2
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(220, 67);
+            label3.Location = new Point(314, 112);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(116, 32);
+            label3.Size = new Size(168, 48);
             label3.TabIndex = 7;
             label3.Text = "Librarian";
             // 
             // btnLogOut
             // 
             btnLogOut.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogOut.Location = new Point(719, 127);
+            btnLogOut.Location = new Point(1027, 212);
+            btnLogOut.Margin = new Padding(4, 5, 4, 5);
             btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(152, 48);
+            btnLogOut.Size = new Size(217, 80);
             btnLogOut.TabIndex = 37;
             btnLogOut.Text = "Log Out";
             btnLogOut.UseVisualStyleBackColor = true;
@@ -153,12 +166,13 @@ namespace FinalVer_Assignment_2
             // 
             // LibrarianForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(919, 580);
+            ClientSize = new Size(1313, 967);
             Controls.Add(btnLogOut);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "LibrarianForm";
             Text = "LibrarianForm";
             panel1.ResumeLayout(false);
@@ -174,7 +188,7 @@ namespace FinalVer_Assignment_2
         private Button btnAddNewBooks;
         private Button btnSearchBook;
         private Button btnUpdateBook;
-        private Button button2;
+        private Button btnDeleteBooks;
         private Panel panel2;
         private Label label1;
         private Label label3;

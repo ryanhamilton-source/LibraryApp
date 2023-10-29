@@ -36,6 +36,7 @@
             panel2 = new Panel();
             label1 = new Label();
             label3 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -43,67 +44,75 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnBack.Location = new Point(21, 126);
+            btnBack.Location = new Point(30, 210);
+            btnBack.Margin = new Padding(4, 5, 4, 5);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(103, 32);
+            btnBack.Size = new Size(147, 53);
             btnBack.TabIndex = 57;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
+            btnBack.Click += this.btnBack_Click;
             // 
             // btnSearch
             // 
             btnSearch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.Location = new Point(491, 150);
+            btnSearch.Location = new Point(701, 250);
+            btnSearch.Margin = new Padding(4, 5, 4, 5);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(83, 24);
+            btnSearch.Size = new Size(119, 40);
             btnSearch.TabIndex = 56;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
+            btnSearch.Click += this.btnSearch_Click;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(303, 151);
+            txtSearch.Location = new Point(433, 252);
+            txtSearch.Margin = new Padding(4, 5, 4, 5);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(168, 23);
+            txtSearch.Size = new Size(238, 31);
             txtSearch.TabIndex = 55;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(236, 153);
+            label2.Location = new Point(337, 255);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(52, 17);
+            label2.Size = new Size(80, 28);
             label2.TabIndex = 54;
             label2.Text = "Search:";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(151, 192);
+            dataGridView1.Location = new Point(216, 320);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(515, 218);
+            dataGridView1.Size = new Size(736, 363);
             dataGridView1.TabIndex = 53;
             // 
             // panel2
             // 
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(130, 12);
+            panel2.Location = new Point(186, 20);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(555, 113);
+            panel2.Size = new Size(793, 188);
             panel2.TabIndex = 52;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(44, 9);
+            label1.Location = new Point(63, 15);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(448, 45);
+            label1.Size = new Size(678, 65);
             label1.TabIndex = 0;
             label1.Text = "Library Management System";
             // 
@@ -111,26 +120,41 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(193, 69);
+            label3.Location = new Point(276, 115);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(165, 32);
+            label3.Size = new Size(244, 48);
             label3.TabIndex = 7;
             label3.Text = "Search Books";
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(505, 693);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(119, 40);
+            button1.TabIndex = 58;
+            button1.Text = "Search";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // ListBookFormUser
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(819, 450);
+            ClientSize = new Size(1170, 750);
+            Controls.Add(button1);
             Controls.Add(btnBack);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(panel2);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "ListBookFormUser";
             Text = "ListBookFormUser";
-            Load += ListBookFormUser_Load;
+            Load += this.ListBookFormUser_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -148,5 +172,6 @@
         private Panel panel2;
         private Label label1;
         private Label label3;
+        private Button button1;
     }
 }

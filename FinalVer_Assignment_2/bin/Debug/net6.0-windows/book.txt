@@ -1,3 +1,2 @@
-1,harry potter,jk rowling,Science Fiction,7,6
 2,Ghost Buster,david Milne,Mystery,10,9
 3,Dungeon and Dragons,Brandon Lee,Fantasy,10,9

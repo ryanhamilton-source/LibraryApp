@@ -16,6 +16,9 @@
     <Compile Update="BorrowBooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DeleteBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LibrarianForm.cs">
       <SubType>Form</SubType>
     </Compile>
